@@ -1,0 +1,39 @@
+SmartCity Complaint System - Windows build/run prerequisites
+
+This is a setup checklist, not a Python requirements file. The project has
+no pip dependencies; do not run `pip install -r requirements.txt`.
+ 
+Install before opening/building the project:
+  1. Windows 10/11 (x64).
+  2. Visual Studio Code. The Microsoft C/C++ extension is recommended for
+     editing and debugging; it is not required by the build.
+  3. MSYS2 installed at C:\msys64. Open the MSYS2 UCRT64 terminal and install
+     the compiler, build tools, graphics libraries, and PostgreSQL:
+ 
+       pacman -Syu
+       pacman -S --needed make mingw-w64-ucrt-x86_64-gcc \
+         mingw-w64-ucrt-x86_64-nasm mingw-w64-ucrt-x86_64-freeglut \
+         mingw-w64-ucrt-x86_64-postgresql
+ 
+     This supplies g++, make, NASM, FreeGLUT/OpenGL, libpq, and PostgreSQL
+     server utilities (initdb, pg_ctl, psql). PostgreSQL 18 is required for
+     the project's database setup/data directory.
+ 
+Before building in a new VS Code PowerShell terminal, add MSYS2 tools to PATH:
+ 
+     $env:Path = "C:\msys64\ucrt64\bin;C:\msys64\usr\bin;" + $env:Path
+ 
+Then, from the project root, build and initialize the database:
+ 
+     make backend
+     make frontend
+     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+     .\database\db.ps1 setup
+     .\database\db.ps1 start
+     .\build\scms_app.exe
+ 
+Optional: copy .env.example to .env and configure GROQ_API_KEY to enable
+          the external AI connection. The built-in assistant and application build do
+          not require an API key.
+ 
+See README.md for full setup, run, database, and troubleshooting instructions.

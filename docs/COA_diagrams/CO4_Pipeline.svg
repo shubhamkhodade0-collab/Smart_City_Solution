@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1350" height="620" viewBox="0 0 1350 620" role="img" aria-labelledby="title description">
+  <title id="title">CO4 Five-Stage Instruction Pipeline</title>
+  <desc id="description">Ideal five-stage pipeline timing diagram for five consecutive independent MOV instructions that initialize ASCII characters for the CO4 complaint-string comparison.</desc>
+  <defs>
+    <style>
+      .title { font: 700 28px "Segoe UI", Arial, sans-serif; fill: #10233f; }
+      .subtitle { font: 15px "Segoe UI", Arial, sans-serif; fill: #52647a; }
+      .header { font: 700 14px "Segoe UI", Arial, sans-serif; fill: #40516a; }
+      .instruction { font: 600 14px Consolas, "Courier New", monospace; fill: #172b4d; }
+      .detail { font: 12px "Segoe UI", Arial, sans-serif; fill: #68788e; }
+      .cycle { font: 700 13px "Segoe UI", Arial, sans-serif; fill: #53647a; }
+      .stage { font: 700 12px "Segoe UI", Arial, sans-serif; fill: #ffffff; }
+      .note { font: 13px "Segoe UI", Arial, sans-serif; fill: #43536a; }
+      .legend { font: 600 12px "Segoe UI", Arial, sans-serif; fill: #43536a; }
+    </style>
+  </defs>
+
+  <rect width="1350" height="620" fill="#f5f8fc"/>
+  <rect x="28" y="24" width="1294" height="572" rx="18" fill="#ffffff" stroke="#dce5ef"/>
+
+  <text x="58" y="72" class="title">CO4 | Five-Stage Instruction Pipeline</text>
+  <text x="58" y="101" class="subtitle">Complaint-string comparison · ASCII byte initialization · ideal single-issue pipeline</text>
+
+  <g transform="translate(740 58)">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="#2563eb"/>
+    <text x="23" y="13" class="legend">IF</text>
+    <rect x="65" y="0" width="16" height="16" rx="4" fill="#7c3aed"/>
+    <text x="88" y="13" class="legend">ID</text>
+    <rect x="130" y="0" width="16" height="16" rx="4" fill="#d97706"/>
+    <text x="153" y="13" class="legend">EX</text>
+    <rect x="195" y="0" width="16" height="16" rx="4" fill="#0891b2"/>
+    <text x="218" y="13" class="legend">MEM</text>
+    <rect x="285" y="0" width="16" height="16" rx="4" fill="#16a34a"/>
+    <text x="308" y="13" class="legend">WB</text>
+  </g>
+
+  <text x="58" y="150" class="header">INSTRUCTION</text>
+  <g class="cycle" text-anchor="middle">
+    <text x="462" y="150">C1</text>
+    <text x="550" y="150">C2</text>
+    <text x="638" y="150">C3</text>
+    <text x="726" y="150">C4</text>
+    <text x="814" y="150">C5</text>
+    <text x="902" y="150">C6</text>
+    <text x="990" y="150">C7</text>
+    <text x="1078" y="150">C8</text>
+    <text x="1166" y="150">C9</text>
+  </g>
+
+  <g stroke="#e6edf5" stroke-width="1">
+    <line x1="418" y1="165" x2="418" y2="470"/>
+    <line x1="506" y1="165" x2="506" y2="470"/>
+    <line x1="594" y1="165" x2="594" y2="470"/>
+    <line x1="682" y1="165" x2="682" y2="470"/>
+    <line x1="770" y1="165" x2="770" y2="470"/>
+    <line x1="858" y1="165" x2="858" y2="470"/>
+    <line x1="946" y1="165" x2="946" y2="470"/>
+    <line x1="1034" y1="165" x2="1034" y2="470"/>
+    <line x1="1122" y1="165" x2="1122" y2="470"/>
+    <line x1="1210" y1="165" x2="1210" y2="470"/>
+    <line x1="48" y1="222" x2="1270" y2="222"/>
+    <line x1="48" y1="280" x2="1270" y2="280"/>
+    <line x1="48" y1="338" x2="1270" y2="338"/>
+    <line x1="48" y1="396" x2="1270" y2="396"/>
+    <line x1="48" y1="454" x2="1270" y2="454"/>
+  </g>
+
+  <g>
+    <text x="58" y="190" class="instruction">I1  MOV #82, R10</text>
+    <text x="58" y="209" class="detail">ASCII 'R'</text>
+    <text x="58" y="248" class="instruction">I2  MOV #79, R11</text>
+    <text x="58" y="267" class="detail">ASCII 'O'</text>
+    <text x="58" y="306" class="instruction">I3  MOV #65, R12</text>
+    <text x="58" y="325" class="detail">ASCII 'A'</text>
+    <text x="58" y="364" class="instruction">I4  MOV #68, R13</text>
+    <text x="58" y="383" class="detail">ASCII 'D'</text>
+    <text x="58" y="422" class="instruction">I5  MOV #114, R14</text>
+    <text x="58" y="441" class="detail">ASCII 'r'</text>
+  </g>
+
+  <g>
+    <g fill="#2563eb">
+      <rect x="422" y="176" width="80" height="34" rx="7"/>
+      <rect x="510" y="234" width="80" height="34" rx="7"/>
+      <rect x="598" y="292" width="80" height="34" rx="7"/>
+      <rect x="686" y="350" width="80" height="34" rx="7"/>
+      <rect x="774" y="408" width="80" height="34" rx="7"/>
+    </g>
+    <g fill="#7c3aed">
+      <rect x="510" y="176" width="80" height="34" rx="7"/>
+      <rect x="598" y="234" width="80" height="34" rx="7"/>
+      <rect x="686" y="292" width="80" height="34" rx="7"/>
+      <rect x="774" y="350" width="80" height="34" rx="7"/>
+      <rect x="862" y="408" width="80" height="34" rx="7"/>
+    </g>
+    <g fill="#d97706">
+      <rect x="598" y="176" width="80" height="34" rx="7"/>
+      <rect x="686" y="234" width="80" height="34" rx="7"/>
+      <rect x="774" y="292" width="80" height="34" rx="7"/>
+      <rect x="862" y="350" width="80" height="34" rx="7"/>
+      <rect x="950" y="408" width="80" height="34" rx="7"/>
+    </g>
+    <g fill="#0891b2">
+      <rect x="686" y="176" width="80" height="34" rx="7"/>
+      <rect x="774" y="234" width="80" height="34" rx="7"/>
+      <rect x="862" y="292" width="80" height="34" rx="7"/>
+      <rect x="950" y="350" width="80" height="34" rx="7"/>
+      <rect x="1038" y="408" width="80" height="34" rx="7"/>
+    </g>
+    <g fill="#16a34a">
+      <rect x="774" y="176" width="80" height="34" rx="7"/>
+      <rect x="862" y="234" width="80" height="34" rx="7"/>
+      <rect x="950" y="292" width="80" height="34" rx="7"/>
+      <rect x="1038" y="350" width="80" height="34" rx="7"/>
+      <rect x="1126" y="408" width="80" height="34" rx="7"/>
+    </g>
+  </g>
+
+  <g class="stage" text-anchor="middle" dominant-baseline="middle">
+    <text x="462" y="193">IF</text><text x="550" y="193">ID</text><text x="638" y="193">EX</text><text x="726" y="193">MEM</text><text x="814" y="193">WB</text>
+    <text x="550" y="251">IF</text><text x="638" y="251">ID</text><text x="726" y="251">EX</text><text x="814" y="251">MEM</text><text x="902" y="251">WB</text>
+    <text x="638" y="309">IF</text><text x="726" y="309">ID</text><text x="814" y="309">EX</text><text x="902" y="309">MEM</text><text x="990" y="309">WB</text>
+    <text x="726" y="367">IF</text><text x="814" y="367">ID</text><text x="902" y="367">EX</text><text x="990" y="367">MEM</text><text x="1078" y="367">WB</text>
+    <text x="814" y="425">IF</text><text x="902" y="425">ID</text><text x="990" y="425">EX</text><text x="1078" y="425">MEM</text><text x="1166" y="425">WB</text>
+  </g>
+
+  <rect x="58" y="490" width="1212" height="76" rx="12" fill="#eef5ff"/>
+  <text x="80" y="520" class="note">These five consecutive MOV instructions are independent, so this ideal single-issue pipeline has no data stalls.</text>
+  <text x="80" y="544" class="note">For MOV-immediate instructions, MEM is a pass-through stage; each instruction writes its destination register in WB.</text>
+</svg>

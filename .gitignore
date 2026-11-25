@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+config/groq.conf
+/build/
+/database/pgdata/
+/database/postgres.log
