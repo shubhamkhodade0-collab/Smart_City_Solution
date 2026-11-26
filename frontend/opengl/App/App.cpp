@@ -228,8 +228,6 @@ std::vector<NavItem> App::navItems() const {
                     {Screen::ANALYTICS3D, "3D Analytics", "cube", "ANALYTICS"},
                     {Screen::USERS, "Users", "users", "ADMINISTRATION"},
                     {Screen::AUDIT, "Audit Logs", "shield", "ADMINISTRATION"},
-                    {Screen::DSA, "DSA Engine", "layers", "ENGINES"},
-                    {Screen::ASSEMBLY, "Assembly Engine", "cpu", "ENGINES"},
                     {Screen::SETTINGS, "System & Settings", "settings", "ENGINES"}};
     }
     return {};
